@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        applicationId "app.technokratzs.classroomconnect"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+
+        classRoomDronacharya{
+
+            applicationId "app.technokratzs.dronacharyaconnect"
+
+
+        }
+
+
+        classRoomSaptarshi{
+
+            applicationId "app.technokratzs.saptarshiconnect"
+
+        }
+    }
+
+
+}
+
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.1.0'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.0.9'
+    compile 'com.github.HackPlan:AndroidCharts:195635f8ee'
+}
